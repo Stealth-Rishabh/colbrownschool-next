@@ -24,6 +24,7 @@ export default function Footer() {
       },
       { name: "Register Now", href: "/admission/registration" },
       { name: "Contact", href: "/contact-us" },
+      { name: "Blog", href: "/blog" },  
     ],
     "Campus Life": [
       { name: "Hostel", href: "/boarding-life/hostel" },
@@ -47,7 +48,7 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="bg-gray-900 text-gray-300 relative overflow-hidden"
+      className="overflow-hidden relative text-gray-300 bg-gray-900"
       style={{ opacity }}
     >
       {/* <WhatsAppButton /> */}
@@ -64,8 +65,8 @@ export default function Footer() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-2 md:grid-cols-2 p-4 lg:grid-cols-4 gap-12">
+      <div className="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-12 p-4 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Contact Info */}
           <motion.div
             className="space-y-6"
@@ -84,12 +85,12 @@ export default function Footer() {
                   alt="Col Brown Cambridge School"
                   width={200}
                   height={60}
-                  className="bg-white p-2"
+                  className="p-2 bg-white"
                 />
               </motion.div>
             </Link>
             <motion.address
-              className="not-italic space-y-3 text-sm "
+              className="space-y-3 text-sm not-italic"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -128,7 +129,7 @@ export default function Footer() {
               >
                 <a
                   href="tel:+916395114363"
-                  className="hover:text-white transition-colors inline-flex items-center group"
+                  className="inline-flex items-center transition-colors hover:text-white group"
                 >
                   <motion.span className="inline-block w-0 group-hover:w-2 h-[1px] bg-white mr-0 group-hover:mr-2 transition-all duration-300" />
                   Admission Helpline: +91 63951 14363
@@ -142,7 +143,7 @@ export default function Footer() {
               >
                 <a
                   href="tel:01353593138"
-                  className="hover:text-white transition-colors inline-flex items-center group"
+                  className="inline-flex items-center transition-colors hover:text-white group"
                 >
                   <motion.span className="inline-block w-0 group-hover:w-2 h-[1px] bg-white mr-0 group-hover:mr-2 transition-all duration-300" />
                   For Enquiry: 0135 3593138
@@ -157,7 +158,7 @@ export default function Footer() {
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=principal@colbrownschool.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors inline-flex items-center group break-all sm:break-normal"
+                  className="inline-flex items-center break-all transition-colors hover:text-white group sm:break-normal"
                 >
                   <motion.span className="inline-block w-0 group-hover:w-2 h-[1px] bg-white mr-0 group-hover:mr-2 transition-all duration-300" />
                   principal@colbrownschool.com
@@ -180,14 +181,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <motion.div
-          className="mt-12 pt-8 border-t border-gray-800"
+          className="pt-8 mt-12 border-t border-gray-800"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col gap-4 justify-between items-center sm:flex-row">
             <motion.p
-              className="text-sm text-gray-400 text-center sm:text-left"
+              className="text-sm text-center text-gray-400 sm:text-left"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
@@ -197,7 +198,7 @@ export default function Footer() {
                 href="https://www.thedesignvillage.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-inherit text-decoration-none cursor-default"
+                className="cursor-default text-inherit text-decoration-none"
               >
                 Rights Reserved
               </a>

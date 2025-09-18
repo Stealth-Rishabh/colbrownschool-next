@@ -23,6 +23,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   ...generateMetadataForPath("/"),
   icons: { icon: "/favicon.png" },
+  verification: {
+    google: "xA6XzhEmg6vteAP9jLSt8CUtl7xIjHmahSWPMVyBYto",
+  },
 };
 
 export default function RootLayout({ children }) {
