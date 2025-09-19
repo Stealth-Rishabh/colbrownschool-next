@@ -3,6 +3,7 @@
 import TopBar from "./TopBar";
 import MainNav from "./MainNav";
 import Drawer from "./Drawer";
+import Marquee from "./Marquee";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -26,27 +27,30 @@ export default function Header() {
   }, [prevScrollPos]);
 
   return (
-    <header
-      className={` shadow-sm z-50 bg-white/70 backdrop-blur-sm transition-all duration-500 ${
-        isVisible ? "sticky top-0 translate-y-0" : "relative -translate-y-full"
-      }`}
-    >
-      <TopBar />
-      <div className="sm:container md:max-w-6xl lg:max-w-[1400px]  mx-auto py-4">
-        <div className="flex items-center justify-between">
-          <a href="/" className="flex flex-col items-start">
-            <Image
-              src="/assets/logo.png"
-              alt="Col Brown Cambridge School"
-              width={280}
-              height={64}
-              className="object-contain p-2 rounded-md h-16"
-            />
-          </a>
-          <MainNav />
-          <Drawer />
+    <>
+      <Marquee />
+      <header
+        className={` shadow-sm z-50 bg-white/70 backdrop-blur-sm transition-all duration-500 ${
+          isVisible ? "sticky top-0 translate-y-0" : "relative -translate-y-full"
+        }`}
+      >
+        <TopBar />
+        <div className="sm:container md:max-w-6xl lg:max-w-[1400px]  mx-auto py-4">
+          <div className="flex justify-between items-center">
+            <a href="/" className="flex flex-col items-start">
+              <Image
+                src="/assets/logo.png"
+                alt="Col Brown Cambridge School"
+                width={280}
+                height={64}
+                className="object-contain p-2 h-16 rounded-md"
+              />
+            </a>
+            <MainNav />
+            <Drawer />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
